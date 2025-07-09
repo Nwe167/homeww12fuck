@@ -1,0 +1,110 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: radial-gradient(
+    rgb(25, 22, 22),
+    rgb(6, 58, 74),
+    rgb(32, 27, 27)
+  );
+  color: white;
+  min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 20px 0;
+  color: rgb(255, 1, 52);
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  background-color: rgb(15, 15, 15);
+  padding: 20px;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 174, 0);
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgb(98, 240, 16);
+  background-color: rgb(172, 50, 50);
+}
+
+/* Responsive Image Gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.image-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-gallery {
+    padding: 20px 10px;
+    gap: 233px;
+  }
+}
+table {
+  border-collapse: collapse;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+}
+th,
+td {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  height: 90px;
+  size: 50px;
+  
+}
+tr{
+  height: 100px;
+  font-weight: 200px;
+}
